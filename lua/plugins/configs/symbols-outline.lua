@@ -42,7 +42,7 @@ local opts = {
       'Interface',
       'Object',
       'Key',
-      -- 'Null',
+      'Null',
       'EnumMember',
       'Event',
       'Operator',
