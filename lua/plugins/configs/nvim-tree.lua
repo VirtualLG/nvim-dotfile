@@ -7,6 +7,7 @@ end
 local options = {
   filters = {
     dotfiles = true,
+    custom = {"*.o"},
   },
   disable_netrw = true,
   hijack_netrw = true,
