@@ -25,10 +25,10 @@ keymap("n", ",q", ":e ~/buffer <cr>", opts)     -- open a buffer
 keymap("n", "Q", ":q <cr>", opts)    		-- quit buffer
 keymap("n", "ZZ", ":lua require('utils').SaveAndExit()<cr>", opts)  -- save & exit project
 -- Resize with arrows
-keymap("n", "<A-Up>", ":resize -2<CR>", opts)
-keymap("n", "<A-Down>", ":resize +2<CR>", opts)
-keymap("n", "<A-Left>", ":vertical resize -2<CR>", opts)
-keymap("n", "<A-Right>", ":vertical resize +2<CR>", opts)
+keymap("n", "<A-=>", ":resize +2<CR>", opts)
+keymap("n", "<A-->", ":resize -2<CR>", opts)
+keymap("n", "<A-<>", ":vertical resize -2<CR>", opts)
+keymap("n", "<A->>", ":vertical resize +2<CR>", opts)
 -- Move text up and down
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
