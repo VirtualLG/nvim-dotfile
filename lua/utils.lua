@@ -68,4 +68,14 @@ end
 --   return label .. bufname(bufnrlist[tabpagewinnr(v:lnum) - 1])
 -- end
 
+M.ClearExtraSpaces = function()
+  vim.cmd [[
+    let save_cursor = getpos(".")
+    let old_query = getreg('/')
+    silent! %s/\s\+$//e
+    call setpos('.', save_cursor)
+    call setreg('/', old_query)
+  ]]
+end
+
 return M
