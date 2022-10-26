@@ -35,6 +35,9 @@ keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 keymap("n", "<leader>n", ":set nu! <CR>", opts)
 keymap("n", "<leader>rn", "set rnu! <CR>", opts)
 
+-- Spell checking
+keymap("n", ",ss", ":setlocal spell! <CR>", opts)  -- spell checking toggle
+
 -- Insert --
 keymap("i", "jl", "<ESC>", opts)        -- Press jl fast for ESC
 keymap("i", "<C-b>", "<ESC>^i", opts)   -- Jump to start of line
