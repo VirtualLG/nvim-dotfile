@@ -116,7 +116,7 @@ M.trouble = function()
   keymap("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", opts)
   keymap("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>", opts)
   keymap("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", opts)
-  keymap("n", "gr",         "<cmd>TroubleToggle lsp_references<cr>", opts)
+  keymap("n", "gr",         "<cmd>Trouble lsp_references<cr>", opts)
   keymap("n", "<C-9>",      "<cmd>lua require('trouble').previous({skip_groups = true, jump = true})", opts)
   keymap("n", "<C-0>",      "<cmd>lua require('trouble').next({skip_groups = true, jump = true})", opts)
 end
