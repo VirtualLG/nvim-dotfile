@@ -11,7 +11,7 @@ vim.cmd[[
 
 vim.cmd[[
   if has("autocmd")
-    autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee :lua require("utils").CleanExtraSpaces()
+    autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee :lua require("utils").ClearExtraSpaces()
   endif
 ]]
 
