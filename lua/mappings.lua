@@ -38,6 +38,9 @@ keymap("n", "<leader>rn", "set rnu! <CR>", opts)
 -- Spell checking
 keymap("n", ",ss", ":setlocal spell! <CR>", opts)  -- spell checking toggle
 
+-- Window zoom
+keymap("n", ",z", ":lua require('utils').WindowZoom() <CR>", opts)
+
 -- Insert --
 keymap("i", "jl", "<ESC>", opts)        -- Press jl fast for ESC
 keymap("i", "<C-b>", "<ESC>^i", opts)   -- Jump to start of line

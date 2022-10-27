@@ -28,7 +28,6 @@ M.SaveAndExit = function()
   vim.api.nvim_command(":qa")
 end
 
-
 -- gtags
 M.GtagsRefernce = function()
   local word = vim.api.nvim_call_function("expand", { "<cword>" })
@@ -68,6 +67,7 @@ end
 --   return label .. bufname(bufnrlist[tabpagewinnr(v:lnum) - 1])
 -- end
 
+-- Delete trailing white space on save, useful for some filetypes :)
 M.ClearExtraSpaces = function()
   vim.cmd [[
     let save_cursor = getpos(".")
@@ -75,6 +75,25 @@ M.ClearExtraSpaces = function()
     silent! %s/\s\+$//e
     call setpos('.', save_cursor)
     call setreg('/', old_query)
+  ]]
+end
+
+-- Toggle window fullscreen
+M.WindowZoom = function()
+  vim.cmd [[
+    " check if is the zoomed state (tabnumber > 1 && window == 1)
+    if tabpagenr('$') > 1 && tabpagewinnr(tabpagenr(), '$') == 1
+      let cur_winview = winsaveview()
+      let cur_bufname = bufname('')
+      tabclose
+
+      " restore the view
+      if cur_bufname == bufname('')
+          call winrestview(cur_winview)
+      endif
+    else
+      tab split
+    endif
   ]]
 end
 
