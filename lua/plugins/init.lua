@@ -245,6 +245,7 @@ return packer.startup(function(use)
       -- " let g:interestingWordsGUIColors = ['#8CCBEA', '#A4E57E', '#FFDB72', '#FF7272', '#FFB3FF', '#9999FF']
       -- " let g:interestingWordsTermColors = ['154', '121', '211', '137', '214', '222']
     -- ]]
+  }
 
   -- Misc
   use {
@@ -253,9 +254,15 @@ return packer.startup(function(use)
     config = function()
       require("plugins.configs.trouble")
       require("mappings").trouble()
-    end
+    end,
   }
-}
+
+  use {
+    'akinsho/toggleterm.nvim', tag = 'v2.2.1',
+    config = function()
+      require("plugins.configs.toggleterm")
+    end,
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
