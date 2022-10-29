@@ -15,3 +15,16 @@ vim.cmd[[
   endif
 ]]
 
+vim.cmd[[
+  let tags_db = findfile("GTAGS", ".;")
+  let tags_path = ""
+
+  if (!empty(tags_db) && filereadable(tags_db))
+    let tags_path = strpart(tags_db, 0, match(tags_db, "/GTAGS$"))
+  endif
+
+  if tags_path != ""
+    exe "chdir " . tags_path
+  endif
+]]
+

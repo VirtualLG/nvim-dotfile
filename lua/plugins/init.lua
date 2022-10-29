@@ -193,7 +193,21 @@ return packer.startup(function(use)
             })
     end,
   }
-  use "jsfaint/gen_tags.vim"         -- tag support
+  use {
+    '~/.config/nvim/plugins/gtags',
+    config = vim.cmd[[
+      set cscopetag " 使用 cscope 作为 tags 命令
+      set cscopeprg='gtags-cscope'
+
+      " gtags-cscope.vim 设置项
+      let g:Gtags_Auto_Map = 1
+      let g:GtagsCscope_Auto_Load = 1
+      let g:GtagsCscope_Ignore_Case = 1
+      let g:GtagsCscope_Auto_Map = 1
+      let g:GtagsCscope_Quiet = 1
+    ]]
+  }
+
   -- Debug
 
   --UI
