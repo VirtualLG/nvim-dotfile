@@ -32,8 +32,8 @@ keymap("n", "<A->>", ":vertical resize +2<CR>", opts)
 -- Move text up and down
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
-keymap("n", "<leader>n", ":set nu! <CR>", opts)
-keymap("n", "<leader>rn", "set rnu! <CR>", opts)
+-- keymap("n", "<leader>n", ":set nu! <CR>", opts)
+keymap("n", "<leader>n", "set rnu! <CR>", opts)
 
 -- Spell checking
 keymap("n", ",ss", ":setlocal spell! <CR>", opts)  -- spell checking toggle
