@@ -6,7 +6,14 @@ if not present then
 end
 
 local options = {
-  size = 20,
+  -- size = 20,
+  size = function(term)
+    if term.direction == "horizontal" then
+      return vim.o.lines * 0.3
+    elseif term.direction == "vertical" then
+      return vim.o.columns * 0.4
+    end
+  end,
   open_mapping = [[<c-\>]],
   hide_numbers = true,
   shade_filetypes = {},
@@ -18,7 +25,8 @@ local options = {
   terminal_mappings = true,
   persist_size = true,
   persist_mode = true,
-  direction = 'float',
+  -- direction = 'float',
+  direction = 'horizontal',
 
   close_on_exit = true,
   shell = vim.o.shell,
