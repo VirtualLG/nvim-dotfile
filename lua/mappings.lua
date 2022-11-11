@@ -135,4 +135,9 @@ M.fugitive = function()
   keymap("n", ",b", "<cmd>Git blame <cr>", opts)
 end
 
+M.translator = function()
+  keymap("n", "<leader>t", "<cmd>TranslateW <cr>", opts)
+  keymap("v", "<leader>t", "<cmd>TranslateW <cr>", opts)
+end
+
 return M

@@ -278,6 +278,13 @@ return packer.startup(function(use)
     end,
   }
 
+  use {
+    "voldikss/vim-translator",
+    config = function()
+      require("mappings").translator()
+    end,
+  }
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
