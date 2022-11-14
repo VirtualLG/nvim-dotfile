@@ -56,6 +56,10 @@ keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 keymap("v", "p", '"_dP', opts)
 
+-- toggle quickfix
+keymap("n", "<C-q>", ":lua require('utils').ToggleQuickFix() <cr>", opts)
+keymap("v", "<C-q>", ":lua require('utils').ToggleQuickFix() <cr>", opts)
+
 local M = {}
 
 M.nvimtree = function()

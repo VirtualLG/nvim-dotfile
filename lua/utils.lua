@@ -97,4 +97,15 @@ M.WindowZoom = function()
   ]]
 end
 
+-- Toggle Quick Fix Window
+M.ToggleQuickFix = function()
+  vim.cmd [[
+    if empty(filter(getwininfo(), 'v:val.quickfix'))
+        copen 20
+    else
+        cclose
+    endif
+  ]]
+end
+
 return M
