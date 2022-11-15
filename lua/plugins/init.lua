@@ -82,6 +82,13 @@ return packer.startup(function(use)
   }
 
   use {
+    'glepnir/lspsaga.nvim',
+    config = function()
+      require("plugins.configs.lspsaga")
+    end,
+  }
+
+  use {
     'ray-x/lsp_signature.nvim',
     config = function()
       require("plugins.configs.lsp-signature")
