@@ -80,7 +80,7 @@ M.telescope = function()
   keymap("n", "<leader>fa", ":Telescope find_files follow=true no_ignore=true hidden=true <CR>", opts) -- find all
   keymap("n", "<leader>fw", ":Telescope live_grep <CR>", opts)    -- live grep
   keymap("n", "<leader>fs", ":Telescope grep_string <CR>", opts)  -- grep string under cursor
-  keymap("n", "<leader>fb", ":Telescope buffers <CR>", opts)      -- find buffers
+  keymap("n", "<leader>ff", ":Telescope buffers <CR>", opts)      -- find buffers
   keymap("n", "<leader>fh", ":Telescope help_tags <CR>", opts)    -- help page
   keymap("n", "<leader>fo", ":Telescope oldfiles <CR>", opts)     -- find oldfiles
   keymap("n", "<leader>fk", ":Telescope keymaps <CR>", opts)      -- show keys
