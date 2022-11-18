@@ -34,6 +34,7 @@ keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 -- keymap("n", "<leader>n", ":set nu! <CR>", opts)
 keymap("n", "<leader>n", "set rnu! <CR>", opts)
+keymap("n", "vl", "^v$", opts)    -- view current line
 
 -- Spell checking
 keymap("n", ",ss", ":setlocal spell! <CR>", opts)  -- spell checking toggle
@@ -84,6 +85,7 @@ M.telescope = function()
   keymap("n", "<leader>fh", ":Telescope help_tags <CR>", opts)    -- help page
   keymap("n", "<leader>fo", ":Telescope oldfiles <CR>", opts)     -- find oldfiles
   keymap("n", "<leader>fk", ":Telescope keymaps <CR>", opts)      -- show keys
+  keymap("n", "<leader>fl", ":Telescope lsp_workspace_symbols <CR>", opts)    -- show workspace_symbols
 
   -- git
   keymap("n", "<leader>gc", ":Telescope git_commits <CR>", opts)  -- git commits
