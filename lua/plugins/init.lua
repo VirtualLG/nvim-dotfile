@@ -223,6 +223,23 @@ return packer.startup(function(use)
   }
 
   -- Debug
+  use {
+    "mfussenegger/nvim-dap",
+    config = function()
+      require("mappings").dap()
+    end,
+  }
+
+  use {
+    "rcarriga/nvim-dap-ui",
+    config = function()
+      require("mappings").dap_ui()
+    end,
+  }
+
+  use {
+    "theHamsta/nvim-dap-virtual-text"
+  }
 
   --UI
   use {

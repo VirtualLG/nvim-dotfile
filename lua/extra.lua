@@ -28,3 +28,5 @@ vim.cmd[[
   endif
 ]]
 
+-- Config DAP
+require("plugins.configs.dap")
