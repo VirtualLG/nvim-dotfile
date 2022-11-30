@@ -165,4 +165,13 @@ M.dap_ui = function()
   keymap("n", "<leader>dt", "<cmd>lua require'dapui'.toggle()<cr>", opts)
 end
 
+M.tmux_nav = function()
+  keymap('n', "<C-h>", "<cmd>NvimTmuxNavigateLeft<cr>", opts)
+  keymap('n', "<C-j>", "<cmd>NvimTmuxNavigateDown<cr>", opts)
+  keymap('n', "<C-k>", "<cmd>NvimTmuxNavigateUp<cr>", opts)
+  keymap('n', "<C-l>", "<cmd>NvimTmuxNavigateRight<cr>", opts)
+  keymap('n', "<C-\\>", "<cmd>NvimTmuxNavigateLastActive<cr>", opts)
+  -- keymap('n', "<C-Space>", "<cmd>NvimTmuxNavigateNext")
+end
+
 return M
