@@ -34,13 +34,16 @@ local options = {
         relative = "editor",
 	anchor = "NE",
         border = "rounded",
-        
+
         width = 30,
         -- height = 30,
         row = 1,
         col = 1,
       },
     },
+  },
+  remove_keymaps = {
+    "<C-e>",
   },
   git = {
     enable = false,
