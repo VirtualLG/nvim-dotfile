@@ -142,6 +142,8 @@ return packer.startup(function(use)
     "tpope/vim-surround",
   }
 
+  use "godlygeek/tabular"
+
   use {
     "numToStr/Comment.nvim",
     event = "BufRead",
