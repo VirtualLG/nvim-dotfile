@@ -142,6 +142,15 @@ M.fugitive = function()
   keymap("n", ",b", "<cmd>Git blame <cr>", opts)
 end
 
+M.diffview = function()
+  keymap("n", "<leader>vo", ":DiffviewOpen --uno<cr>", opts)      -- diffviewopen without untracked files
+  keymap("n", "<leader>vs", ":DiffviewOpen --staged <cr>", opts)  -- diffviewopen staged hunks
+  keymap("n", "<leader>vh", ":DiffviewFileHistory %<cr>", opts)   -- current repo history
+  keymap("n", "<leader>vf", ":DiffviewFileHistory %<cr>", opts)   -- current file history
+  keymap("v", "<leader>vl", ":DiffviewFileHistory <cr>", opts)    -- selected lines histroy
+  keymap("n", "<leader>vc", ":DiffviewClose <cr>", opts)          -- diffview close
+end
+
 M.translator = function()
   keymap("n", "<leader>t", "<cmd>TranslateW <cr>", opts)
   keymap("v", "<leader>t", "<cmd>TranslateW <cr>", opts)

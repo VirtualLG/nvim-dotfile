@@ -123,8 +123,12 @@ return packer.startup(function(use)
   }
   use {
     'sindrets/diffview.nvim',
-    event = "BufRead",
-    requires = 'nvim-lua/plenary.nvim'
+    -- event = "BufRead",
+    requires = 'nvim-lua/plenary.nvim',
+    config = function()
+      require("plugins.configs.diffview")
+      require("mappings").diffview()
+    end,
   }
   use {
     'tpope/vim-fugitive',

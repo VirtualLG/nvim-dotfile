@@ -4,7 +4,7 @@ if not status_ok then
   return
 end
 
-local actions = diffview.actions
+local actions = require("diffview.actions")
 
 diffview.setup({
   diff_binaries = false,    -- Show diffs for binaries
@@ -60,11 +60,13 @@ diffview.setup({
   },
   file_history_panel = {
     log_options = {   -- See ':h diffview-config-log_options'
-      single_file = {
-        diff_merges = "combined",
-      },
-      multi_file = {
-        diff_merges = "first-parent",
+      git = {
+        single_file = {
+          diff_merges = "combined",
+        },
+        multi_file = {
+          diff_merges = "first-parent",
+        },
       },
     },
     win_config = {    -- See ':h diffview-config-win_config'
