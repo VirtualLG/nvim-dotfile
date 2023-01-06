@@ -62,6 +62,7 @@ return packer.startup(function(use)
       require("plugins.configs.treesitter")
     end,
   }
+  use 'nvim-treesitter/nvim-treesitter-context'
   use "MTDL9/vim-log-highlighting"
 
   -- LSP
