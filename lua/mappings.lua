@@ -99,7 +99,6 @@ M.telescope = function()
 
   -- extensions
   keymap("n", "<leader>fd", ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", opts)
-  keymap("n", "<leader>fm", ":lua require('telescope').extensions.frecency.frecency({ workspace = 'CWD' })<CR>", opts)
 end
 
 M.bufferline = function()
