@@ -85,7 +85,7 @@ M.telescope = function()
   keymap("n", "<leader>fh", ":Telescope help_tags <CR>", opts)    -- help page
   keymap("n", "<leader>fo", ":Telescope oldfiles <CR>", opts)     -- find oldfiles
   keymap("n", "<leader>fk", ":Telescope keymaps <CR>", opts)      -- show keys
-  keymap("n", "<leader>fl", ":Telescope lsp_workspace_symbols <CR>", opts)    -- show workspace_symbols
+  keymap("n", "<leader>fl", ":Telescope lsp_dynamic_workspace_symbols <CR>", opts)    -- show workspace_symbols
 
   -- git
   keymap("n", "<leader>gc", ":Telescope git_commits <CR>", opts)  -- git commits
